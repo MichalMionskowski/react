@@ -1,0 +1,37 @@
+<html>
+    <script src = "react.production.min.js"> </script>
+    <script src = "react-dom.production.min.js"> </script>
+    <div id = "QA"> </div>
+    
+    <script>
+        class CustomComponent extends React.Component{
+            constructor() {
+                super();
+                this.state = {
+                color: 'green'
+            }
+
+            changeColour = (e) => this.setState({
+                color : e.target.value
+            });
+        }
+            render(){
+                var component = React.createElement("div", null , "not a bad word");
+                
+                return component;
+            }
+
+  
+        }
+        
+        var div1 =document.getElementById("QA");
+        var firstComponent = React.createElement(CustomComponent,null);
+        
+
+        //var a = React.createElement("div", null, [firstComponent,firstComponent2])
+        ReactDOM.render(firstComponent,div1);
+        
+    </script>    
+    
+
+</html>
